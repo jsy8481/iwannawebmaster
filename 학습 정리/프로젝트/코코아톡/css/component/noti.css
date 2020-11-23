@@ -1,7 +1,7 @@
 .noti {
   width: 18px;
   height: 18px;
-  border-radius: 90%;
+  border-radius: 95%;
 
   position: absolute;
   top: -2px;
@@ -12,6 +12,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.noti--chats {
+  position: relative;
+  margin-top: 10px;
+}
+
+.noti--find {
+  width: 5px;
+  height: 5px;
+  right: -5px;
 }
 
 .noti__text {

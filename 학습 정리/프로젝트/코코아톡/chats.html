@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends</title>
+    <title>Chats</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -31,45 +31,20 @@
 
     <nav class="navigation">
       <div class="navigation__curScreen">
-        <span>Friends</span>
+        <span>Chats</span>
       </div>
       <div class="navigation__icons">
         <i class="fas fa-search fa-lg navigation__icons__icon"></i>
+        <i class="fas fa-comment-medical fa-lg navigation__icons__icon"></i>
         <i class="fas fa-music fa-lg navigation__icons__icon"></i>
         <i class="fas fa-cog fa-lg navigation__icons__icon"></i>
       </div>
     </nav>
-    <div class="displayBlock">
-      <i class="fas fa-info-circle displayBlock__item"></i>
-      <span class="displayBlock__item">Friends' Names Display</span>
-      <i class="fas fa-chevron-right displayBlock__item"></i>
-    </div>
     <main>
       <div class="target">
         <div class="target__info">
           <img
-            class="target__info__img"
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA2MTFfMjg3%2FMDAxNTkxODQ0NzAzNzM2.iZvKDN-5tR-WxXYKvhJEW7TvNtVXL0YP-sfMAz8kejwg.Jwx_hG9jOpSnrCt-z87YgOth7UAFWJsLWOw94zAeTfAg.JPEG.hijiahn%2F%25B6%25F3%25C0%25CE%25C7%25C1%25B7%25BB%25C1%25EE_%25BA%25EA%25B6%25F3%25BF%25EE.jpg&type=sc960_832"
-            alt=""
-          />
-          <div class="target__info__text">
-            <div class="target__info__text__name">
-              <span>브라운</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="horizontalDivider">
-        <div class="horizontalDivider__hr"></div>
-        <div class="horizontalDivider__nextSection">
-          <span>Channel</span>
-          <i class="fas fa-chevron-up"></i>
-        </div>
-      </div>
-      <div class="target">
-        <div class="target__info">
-          <img
-            class="target__info__img target__info__img--small"
+            class="target__info__img target__info__img--big"
             src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMTVfODUg%2FMDAxNTg0MjA1ODU4MzYx.lg_GYAbe4X756fezd0ZPvjXM9jQaizTb_aT-XF_qDa8g.7EKyg898ifvkzBFercdfHE7w8Jd_iHTju1iWaQ70xtEg.JPEG.o8o8o8486%2F1584205857496.jpg&type=sc960_832"
             alt=""
           />
@@ -79,11 +54,14 @@
             >
               <span>코니</span>
             </div>
+            <div class="target__info__text__desc">
+              <span>안녕 브라움!!!</span>
+            </div>
           </div>
         </div>
-        <div class="target__remain">
-          <span>2</span>
-          <i class="fas fa-chevron-right fa-sm"></i>
+        <div class="target__remain target__remain--column">
+          <span>21:22</span>
+          <div class="noti noti--chats"><span class="noti__text">1</span></div>
         </div>
       </div>
     </main>
@@ -93,7 +71,7 @@
       </a>
       <div class="underMenu__icon">
         <a href="chats.html">
-          <i class="far fa-comment fa-2x"></i>
+          <i class="fas fa-comment fa-2x"></i>
         </a>
         <div class="noti"><span class="noti__text">1</span></div>
       </div>

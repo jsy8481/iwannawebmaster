@@ -8,10 +8,15 @@
 @import url("component/horizontalDivider.css");
 @import url("component/underMenu.css");
 @import url("component/noti.css");
+@import url("component/icon.css");
 
 /* Screen */
 @import url("screen/welcomeScreen.css");
 @import url("screen/friendsScreen.css");
+@import url("screen/findScreen.css");
+@import url("screen/moreScreen.css");
+@import url("screen/settings.css");
+@import url("screen/start.css");
 
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -26,10 +31,6 @@ body {
 
   position: relative;
 }
-
-/* div {
-  border: 1px solid black;
-} */
 
 main {
   padding: 13px;

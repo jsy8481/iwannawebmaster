@@ -3,6 +3,10 @@
   margin-bottom: 15px;
 }
 
+.horizontalDivider--topMargine{
+  margin-top: 30px;
+}
+
 .horizontalDivider__hr {
   background-color: var(--shineBlack);
 

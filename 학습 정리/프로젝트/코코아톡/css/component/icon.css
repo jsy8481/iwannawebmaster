@@ -1,0 +1,23 @@
+.icons {
+  margin-top: 15px;
+}
+
+.icons__row {
+  display: flex;
+}
+
+.icons__row:not(:first-child) {
+  margin-top: 35px;
+}
+
+.icons__icon {
+  width: 25%;
+
+  text-align: center;
+}
+
+.icons__icon__desc {
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}

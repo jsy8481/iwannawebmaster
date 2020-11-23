@@ -1,15 +1,20 @@
-.navigation{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding : 13px;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+  margin-top: 5px;
 }
 
-.navigation__curScreen{
-    font-size: 24px;
-    font-weight: 600;
+.navigation__curScreen {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.navigation__icons__icon{
-    margin-left: 20px;
+.navigation__icons{
+  position: relative;
+}
+
+.navigation__icons__icon {
+  margin-left: 15px;
 }
