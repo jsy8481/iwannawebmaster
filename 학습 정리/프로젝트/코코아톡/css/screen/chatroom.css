@@ -1,0 +1,147 @@
+.chartroom__chevron {
+  width: 65px;
+}
+
+.chatroom--background {
+  background-color: turquoise;
+  height: 100%;
+}
+
+.chatroom__time {
+  display: flex;
+  justify-content: center;
+}
+
+.chatroom__time__span {
+  display: block;
+  padding: 10px;
+  background-color: aliceblue;
+  border-radius: 15px;
+  font-weight: 600;
+
+  margin-bottom: 30px;
+}
+
+.chat__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.chat {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.chat--left {
+  justify-content: flex-end;
+}
+
+.chat__text {
+  margin-left: 10px;
+}
+
+.chat__text__name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.chat__text__talk {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+
+  font-weight: 500;
+}
+
+.chat__text__talk--left {
+  background-color: gold;
+}
+
+.keyboard {
+  position: absolute;
+  bottom: 0;
+}
+
+.keyboard__upper {
+  color: var(--lightBlack);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.keyboard__upper__input {
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--veryshineBlack);
+
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 10px 1px 10px 15px;
+
+  font-size: 20px;
+}
+
+.keyborder__upper__input__buttons {
+  display: flex;
+}
+
+.keyborder__upper__input__buttons__first {
+  margin-right: 20px;
+}
+
+.keyborder__upper__input__buttons__first__last {
+  margin-right: 10px;
+}
+.keyboard__keys {
+  background-color: lightgray;
+}
+.keyboard__keys_rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.keyboard__rows__key {
+  width: 8.5%;
+  height: 40px;
+
+  background: white;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 23px;
+  font-weight: 500;
+
+  box-shadow: 1px 1px black;
+  margin-left: 5px;
+}
+
+.keyboard__rows__key__big {
+  width: 11%;
+  height: 45px;
+  margin: 9px;
+  background-color: lightslategray;
+}
+
+.keyboard__row__key__smallFont {
+  font-size: 18px;
+}
+.keyboard__rows__key__four {
+  width: 37%;
+}
+
+.keyboard__rows__key__two {
+  width: 23%;
+}
+
+.lightgreyback {
+  background-color: lightslategray;
+}
