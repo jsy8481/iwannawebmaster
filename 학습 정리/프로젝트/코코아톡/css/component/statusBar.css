@@ -1,0 +1,30 @@
+/* statusBar */
+.statusBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+  }
+  
+  .statusBar__column {
+    width: 33%;
+  }
+  
+  .statusBar__column--center {
+    display: flex;
+    justify-content: center;
+  
+    font-weight: 600;
+  }
+  
+  .statusBar__column--end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .statusBar__column__icon {
+    margin-left: 5px;
+  }
+  
+  .statusBar__column__icon--rightMargin {
+    margin-right: 5px;
+  }

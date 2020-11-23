@@ -1,0 +1,7 @@
+:root {
+  --veryshineBlack: rgb(0, 0, 0, 0.05);
+  --shineBlack: rgb(0, 0, 0, 0.1);
+  --lightBlack: rgb(0, 0, 0, 0.3);
+  --middleBlack: rgb(0, 0, 0, 0.5);
+  --darkBlack: rgb(0, 0, 0, 0.8);
+}

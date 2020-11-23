@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="statusBar">
+      <div class="statusBar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="statusBar__column statusBar__column--center">
+        <span>18:43</span>
+      </div>
+      <div class="statusBar__column statusBar__column--end">
+        <i
+          class="fas fa-user-lock statusBar__column__icon statusBar__column__icon--rightMargin"
+        ></i>
+        <span>11%</span>
+        <i class="fas fa-battery-three-quarters statusBar__column__icon"></i>
+        <i class="fas fa-bolt statusBar__column__icon"></i>
+      </div>
+    </div>
+    <main>
+      <header class="welcome">
+        <div class="welcome__title">
+          <h1>Welcome to KakaoTalk</h1>
+        </div>
+        <div class="welcome__desc">
+          <p>If you have a Kakao Account,</p>
+          <p>log in with your email or phone number.</p>
+        </div>
+      </header>
+
+      <div class="loginForm">
+        <form action="#">
+          <input
+            type="text"
+            class="loginForm__input"
+            placeholder="Email or phone number"
+          />
+          <input
+            type="password"
+            class="loginForm__input loginForm__input--bottomMargin"
+            placeholder="Password"
+          />
+          <input type="submit" class="loginForm__submit" value="Log In" />
+          <input type="submit" class="loginForm__submit" value="Sign Up" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

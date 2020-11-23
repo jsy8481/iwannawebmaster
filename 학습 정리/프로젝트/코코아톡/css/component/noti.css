@@ -1,0 +1,22 @@
+.noti {
+  width: 18px;
+  height: 18px;
+  border-radius: 90%;
+
+  position: absolute;
+  top: -2px;
+  right: -7px;
+
+  background-color: tomato;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noti__text {
+  font-size: 9px;
+  font-weight: 600;
+
+  color: white;
+}

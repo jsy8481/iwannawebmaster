@@ -1,0 +1,17 @@
+.underMenu {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  background-color: var(--veryshineBlack);
+  color: var(--darkBlack);
+  border-top: 1px solid var(--shineBlack);
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.underMenu__icon {
+  position: relative;
+}

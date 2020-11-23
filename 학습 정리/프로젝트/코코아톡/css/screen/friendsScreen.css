@@ -1,0 +1,16 @@
+.displayBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  background-color: var(--veryshineBlack);
+  color: var(--darkBlack);
+  padding: 10px;
+}
+
+.displayBlock__item {
+  margin-right: 7px;
+}
