@@ -26,8 +26,8 @@
 }
 
 body {
-  width: 430px;
-  height: 750px;
+  /* width: 430px;
+  height: 750px; */
   border: 1px solid black;
 
   position: relative;
