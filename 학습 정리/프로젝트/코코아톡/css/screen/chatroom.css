@@ -4,7 +4,7 @@
 
 .chatroom--background {
   background-color: turquoise;
-  height: 100%;
+  height: 100vh;
 }
 
 .chatroom__time {
@@ -61,6 +61,7 @@
 .keyboard {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 .keyboard__upper {
@@ -72,7 +73,7 @@
 }
 
 .keyboard__upper__input {
-  width: 310px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

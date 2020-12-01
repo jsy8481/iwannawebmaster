@@ -1,0 +1,21 @@
+#min-size {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: gold;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 650px) {
+  #min-size {
+    display: none;
+  }
+}
