@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.horizontal {
+  position: absolute;
+  top: 50vh;
+
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.vertical {
+  position: absolute;
+  left: 50vw;
+
+  width: 1px;
+  height: 100%;
+  background-color: white;
+}
+
+.target {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.target__px {
+  position: absolute;
+  color: white;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(30px, 15px);
+}

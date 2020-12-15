@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      img {
+        display: block;
+      }
+      #moveRabbit {
+        margin-bottom: 20px;
+      }
+      .imageList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imageList">
+      <button id="moveRabbit">토끼야 어디야?</button>
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="rabbit" src="img/rabbit.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+      <img class="carrot" src="img/carrot.png" alt="" />
+    </div>
+    <script>
+      const findRabbit = document.querySelector('#moveRabbit');
+      const rabbit = document.querySelector('.rabbit');
+      
+      const rabbitDOMRect = rabbit.getBoundingClientRect()
+      console.log(rabbitDOMRect)
+      const rabbitX = rabbitDOMRect.bottom;
+      const rabbitY = rabbitDOMRect.right;
+      
+      findRabbit.addEventListener('click',() => {
+        rabbit.scrollIntoView({block: "center", behavior : "auto"});
+      });
+    </script>
+  </body>
+</html>
