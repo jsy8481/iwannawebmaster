@@ -80,8 +80,6 @@ header {
 }
 
 .gameMap {
-  display: none;
-
   position: relative;
 
   margin-top: 110px;
@@ -100,7 +98,7 @@ header {
 
 .bug {
   position: absolute;
-  transition: all 0.15 s ease-in-out;
+  transition: all 0.15s ease-in-out;
   cursor: pointer;
 }
 

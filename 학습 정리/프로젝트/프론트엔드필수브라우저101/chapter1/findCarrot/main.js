@@ -9,7 +9,13 @@ const popupMessage = document.querySelector('.popup__message');
 
 let downtimer;
 let timeout;
-let carrot
+let time;
+let carrot;
+let score;
+
+let GAMETIME = 10;
+let CARROTNUM = 20;
+let BUGNUM = 10;
 
 controller.addEventListener('click', (e)=>{
     if(controller.classList.contains('start')){
@@ -30,7 +36,7 @@ controller.addEventListener('click', (e)=>{
     else if(controller.classList.contains('stop')){
        // replay 버튼 띄우기
         makeGameNotClickable();
-        removeTimeEvent();
+        clearInterval(downTimer);
         makepopup("정지! 다시 시작할까요?");
     }
 })
@@ -38,19 +44,20 @@ controller.addEventListener('click', (e)=>{
 gameMap.addEventListener('click', (e)=>{
     if(e.target.classList.contains('carrot')){
         e.target.parentNode.removeChild(e.target);
-        remainCarrot.textContent = remainCarrot.textContent - 1;
+        score++;
+        remainCarrot.textContent = CARROTNUM - score;
 
         // 승리 조건 확인
-        if (remainCarrot.textContent === '0'){
+        if (score === CARROTNUM){
             makeGameNotClickable();
-            removeTimeEvent();
+            clearInterval(downTimer);
             makepopup("성공! 모든 당근을 클릭했어요");
         }
     }
 
     if(e.target.classList.contains('bug')){
         makeGameNotClickable();
-        removeTimeEvent();
+        clearInterval(downTimer);
         makepopup("실패! 벌레를 클릭했어요");
     }
 })
@@ -58,7 +65,6 @@ gameMap.addEventListener('click', (e)=>{
 replayButton.addEventListener('click', ()=>{
     controller.classList.remove('notClickable');
     gameMap.classList.remove('notClickable');
-
     popup.style.display = 'none';
 
     start();
@@ -66,52 +72,65 @@ replayButton.addEventListener('click', ()=>{
 
 const start = function(){
     //1. 초기 세팅
-    gameMap.style.display = 'block';
     gameMap.innerHTML = '';
+    remainCarrot.textContent = CARROTNUM;
+    score = 0;
     // 시간
-    timer.textContent = "00:10"
-    downTimer = setInterval(()=>{
-        
-        newTime = timer.textContent.slice(3) - 1
-        if (newTime < 10){
-            timer.textContent = `00:0${newTime}`
-        } else {
-            timer.textContent = `00:${newTime}`
-        }
-    }, 1000)
-
-    timeOut = window.setTimeout(()=>{
-        makeGameNotClickable();
-        removeTimeEvent();
-        makepopup("실패! 시간을 초과하셨습니다.");
-        // 실패했는지 확인
-    }, 10000)
+    time = GAMETIME;
+    setTime(time);
+    downTimer = setTimer();
     // 당근 및 벌레 배치 하기
-    for (let index = 0; index < 10; index++) {
-        carrot = document.createElement('img');
-        carrot.setAttribute('class', 'carrot');
-        carrot.setAttribute('src', 'img/carrot.png');
-        carrot.style.bottom = `${Math.random() * 100}%`;
-        carrot.style.right = `${Math.random() * 100}%`;
-        gameMap.appendChild(carrot)
-        console.log(gameMap.childNodes);
+    for (let index = 0; index < CARROTNUM; index++) {
+        makeGameMapImg('carrot','img/carrot.png');
+    }
+    
+
+    for (let index = 0; index < BUGNUM; index++) {
+        makeGameMapImg('bug','img/bug.png');
     }
 
-    for (let index = 0; index < 10; index++) {
-        bug = document.createElement('img');
-        bug.setAttribute('class', 'bug');
-        bug.setAttribute('src', 'img/bug.png');
-        bug.style.bottom = `${Math.random() * 100}%`;
-        bug.style.right = `${Math.random() * 100}%`;
-        gameMap.appendChild(bug);
+    makeBugMove();
+}
+const makeBugMove = function(){
+    let bugs = document.querySelectorAll('.bug');
+    moveBug = setInterval(()=>{
+        bugs.forEach(bug => {
+            let bottom = bug.style.bottom.slice(0, -1);
+            let right = bug.style.right.slice(0, -1);
+            makeBugDestiantion(bottom);
+            bug.style.bottom = `${makeBugDestiantion(bottom)}%`
+            bug.style.right = `${makeBugDestiantion(right)}%`
+        });
+    }, 150);
+}
+
+const makeBugDestiantion = function(current){
+    let flag = 1;
+    if (Math.random() > 0.5){
+        flag = -1;
     }
-    // 남은 당근
-    remainCarrot.textContent = 10;
+
+    let destination = Number(current) + Math.random() * 3 * flag;
+    destination = Math.max(0, destination);
+    destination = Math.min(destination, 100);
+    return destination;
+}
+
+
+
+const makeGameMapImg = function (className, src){
+    img = document.createElement('img');
+    img.setAttribute('class', className);
+    img.setAttribute('src', src);
+    img.style.bottom = `${Math.random() * 100}%`;
+    img.style.right = `${Math.random() * 100}%`;
+    gameMap.appendChild(img)
 }
 
 const makepopup = function(message){
     popup.style.display = 'flex';
     popupMessage.textContent = message;
+    makeGameNotClickable();
 }
 
 const makeGameNotClickable = function(){
@@ -119,7 +138,25 @@ const makeGameNotClickable = function(){
     gameMap.classList.add('notClickable');
 }
 
-const removeTimeEvent = function(){
-    clearInterval(downTimer);
-    clearTimeout(timeOut);
+const setTimer = function(){
+    let downTimer = setInterval(()=>{
+        if (time === 0){
+            makeGameNotClickable();
+            clearInterval(downTimer);
+            makepopup("실패! 시간을 초과하셨습니다.");
+            return
+        }
+
+        time -= 1;
+        setTime(time);
+
+    }, 1000)
+
+    return downTimer;
+}
+
+const setTime = function(time){
+    minute = Math.floor(time / 60);
+    sec = time % 60;
+    timer.textContent = `${('0' + minute).slice(-2)}:${('0' + sec).slice(-2)}`
 }
